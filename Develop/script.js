@@ -17,3 +17,20 @@ function writePassword() {
 
   passwordText.value = password;
 }
+// Generate password based on criteria.
+function generatePassword() {
+  let charSet = []
+
+  var passwordLength = prompt("Do you want the password to have a certain length? - Enter number between 8 - 128")
+  if (passwordLength < 8 || passwordLength > 128) {
+   alert("Incorrect password length")
+   generatePassword()
+  } else if (passwordLength === "" || isNaN (passwordLength)) {
+   alert("Please enter valid password between 8 and 128")
+   generateBtn()
+  }
+
+  var lowercase = confirm("would you like lowercase in your password");
+  var uppercase = confirm("would you like uppercase in your password");
+  var numbers = confirm("would you like Numbers in your password");
+  var symbols = confirm("would you like symbols in your password");
