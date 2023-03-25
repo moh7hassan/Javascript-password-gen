@@ -34,3 +34,37 @@ function generatePassword() {
   var uppercase = confirm("would you like uppercase in your password");
   var numbers = confirm("would you like Numbers in your password");
   var symbols = confirm("would you like symbols in your password");
+
+  if (lowercase == true){
+    charSet = charSet.concat(charLowercase);
+   }
+
+   if (uppercase == true){
+    charSet = charSet.concat(charUppercase);
+   }
+
+   if (numbers == true) {
+    charSet = charSet.concat(charNumbers);
+   }
+
+   if (symbols == true){
+    charSet = charSet.concat(charSymbols);
+   }
+
+   if (lowercase == false && uppercase == false && numbers == false && symbols ==false){
+    alert("You need to select atleast one option")
+   }
+
+   console.log(charSet)
+
+   var results = ""
+
+   for(let i = 0, n = charSet.length; i <parseInt(passwordLength); i++){
+    results += charSet[Math.floor(Math.random() *n)];
+   }
+   return results;
+
+  }
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
