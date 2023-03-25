@@ -6,3 +6,5 @@ I used HTMl and CSS and JavaScript code to create an app that allows employees t
 
 
 ![password-generator-image](./Assets/Screenshot%202023-03-25%20172132.png)
+
+https://moh7hassan.github.io/Javascript-password-gen/
